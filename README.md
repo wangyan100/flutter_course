@@ -18,3 +18,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ## online ide for dart
 - https://dartpad.dev/
+
+## concept of named argument 
+-  home: is named argument return MaterialApp(home: Text('Hello World!' ),)
+-  add trailing ',' after Text('Hello World!' )  to make better format
+
+
