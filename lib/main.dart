@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './movie/list.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -74,21 +76,20 @@ class MyHome extends StatelessWidget {
           decoration: BoxDecoration(color: Colors.black),
           height: 50,
           child: TabBar(
-            labelStyle: TextStyle(height: 0,fontSize: 10),
+            labelStyle: TextStyle(height: 0, fontSize: 10),
             tabs: <Widget>[
-              Tab(
-                icon:Icon(Icons.movie_filter),
-                text:'正在热映'
-              ), Tab(
-                icon:Icon(Icons.movie_creation),
-                text:'即将上演'
-              ), Tab(
-                icon:Icon(Icons.local_movies),
-                text:'Top20'
-              ),
-
+              Tab(icon: Icon(Icons.movie_filter), text: '正在热映'),
+              Tab(icon: Icon(Icons.movie_creation), text: '即将上演'),
+              Tab(icon: Icon(Icons.local_movies), text: 'Top20'),
             ],
           ),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            MovieList(mt:'in_theaters'),
+            MovieList(mt:'coming_soon'),
+            MovieList(mt: 'top250'),
+          ],
         ),
       ),
     );
