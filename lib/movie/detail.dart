@@ -15,6 +15,12 @@ class MovieDetail extends StatefulWidget {
 class _MovieDateilState extends State<MovieDetail> {
   @override
   Widget build(BuildContext context) {
-    return Text('detail ---- ${widget.id}');
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
+      body: Text('电影id ${widget.id}'),
+    );
   }
 }
